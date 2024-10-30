@@ -1,0 +1,85 @@
+/* Styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f5;
+}
+
+/* Conteneur principal */
+.container {
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Logo et en-tête */
+.logo {
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Formulaire */
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    background-color: #0071e3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login-form button:hover {
+    background-color: #005bb5;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 15px;
+    color: #0071e3;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Pied de page */
+footer p {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+}
